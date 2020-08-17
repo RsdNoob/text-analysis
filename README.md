@@ -57,27 +57,9 @@ Word frequency and concordance will be done in this part.
 
 This analysis will be useful to know which words are usually associated to a post about juices.
 
-As seen on the chart below, **say** is the most used word in social media post about juices. Remember that lemmatization was applied in text cleaning, hence the word **say** can be a word from **said**. This implies that topics about juices are usually shared by other people through their posts. An example of this is,
-
-*“The best juices are the boring ones,” **said** no one ever. With their funky fresh flavours, the newest juice bar in town has a wide range of exotic ingredients (and some are drop-dead gorgeous)! See them for yourself!*
-
 ### Collocation
 
 Collocation is useful if the word frequency doesn't make sense. It is done by getting pairs (bi-gram) or triwise (tri-gram) of words in a single sentence or post.
-
-Below is the top 5 words after doing the collocation technique for bi-grams. **use gagt** is a community in Singapore where people talk about different topics including juices. An example of this post is,
-
-*invigo79 wrote: So people wont misunderstand. Apple juice look like champagne in term of colour. Sent from Home using **GAGT noob**. apple juice look like champagne ?*
-
-It is hard to clean this part since some posts with **use gagt** contains useful information.
-
-There are lesser occurence of tri-grams compared to tri-grams. It is understandable since it has more words in a set. An example of a post where the top tri-grams (**rm per gallon**) is used,
-
-*5-3-2019 4:49 AMsgbuffett said: https://m.malaysiakini.com/letters/461555 There was once a generous orchard owner who owned multiple mango trees. The trees had an abundance of fruits such that he shared with his neighbour, who had no land to grow them. As decades passed, the neighbour improvised the mango to canned mango juice and made his fortune. Despite being more prosperous, the neighbour continued to exploit the orchard owner to live up to the deal, even though the trees do not bear as many mangoes now. If the orchard owner is Malaysia, I am sure most of us could guess the rest of the metaphorical expressions in the story correctly. In accordance to the Water Agreement 1962, Singapore may extract 250 million gallons of raw water per day from the Johor River, with a condition that two percent or 5 million gallons of treated water were supplied back daily. Given that it costs Singapore RM 2.40 to treat 1,000 gallons of raw water, Singapore subsidised the raw water by **RM 1.90 per 1,000 gallons**, while Johor supports **RM 0.50 per 1000 gallons**. Johor sells the treated water to its Johoreans at **RM 3.95 per 1,000 gallons**, enabling it to earn a profit of **RM 3.45 per 1,000 gallons**. Analysing the figures through the current domestic water tariff rate and water treatment cost, the 5 million gallons a day deal allows Johor to make RM17,250 per day, while Singapore spends RM 9,550 daily. The other side of the coin seems to be overshadowed by the presumably high figures. It is mind-blowing to learn that if Johor decides to keep its 250 million gallons of raw water, with the aforementioned treatment cost, the profit calculates to RM 380,000 per day. On the other hand, with the purchase of raw water at a trifling RM 0.03 per 1000 gallons, the same treatment cost and current domestic water tariff rate by Public Utilities Board of Singapore, our neighbour makes a whopping RM 8,739,858 daily. As we speak, through the Water Agreement, Malaysia loses RM 362,750 while Singapore gains RM 8.7 million daily. Is that a â€˜fairâ€™ agreement? It is baffling to learn that raw water is not considered as a natural resource but, a commodity by Singapore. When Malaysia wanted to review the price in 1987 as it felt its natural resource was exploited, Singapore refused to cooperate. Can we say you bought some goods from China at 50c and you sell the product at $10 in Singapore, very unfair to China?*
-
-Remeber that in the data cleaning, non-alphabet characters were removed. It shows that text cleaning is importan when doing text analysis. If the numbers were not removed, it will show a different set of tri-grams which possibly doesn't make sense.
-
-After getting insights from collocation analysis, advanced analysis can now be done.
 
 ## Advanced Analysis (Unsupervised)
 
@@ -94,12 +76,6 @@ After transforming the data, the next step is to identify the number of clusters
 - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html
 
 After identifying the number of clusters, it is now possible to train the K-means clustering.
-
-*Note: Since the intersection is between 5 and 6, I tried training the clustering with both those numbers. It showed in a different notebook that **six** clusters is more interpretable.*
-
-K-means clustering is relatively simple to implement. However, its cons is that there will always be one cluster that contains a lot of data. In this project's case, cluster **3** contains a significant amount of posts compared to other clusters.
-
-Below are word clouds for each cluster. It can be seen that there are top words for each cluster. These words serve as the guide on the topics per cluster.
 
 ### Sentiment Analysis
 
