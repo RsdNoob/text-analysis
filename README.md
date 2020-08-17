@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Most of the time, text data doesn't have a label. There are basic analysis that can be done in this kind of data like word frequency and collocation. However, advance analysis can also be done if the data is labelled. These kind of analysis includes text classification and sentiment analysis. Hence, this project uses an unsupervised learning method to label text data. The data is from public posts in Singapore around juices and beverages. The timeframe of the data is from November 2018 to May 2019. Basic analysis will be done first before doing the advanced analysis. Using K-means clustering to classify, it showed five categories of posts which were **fruit juices**, **shared ideas about juices**, **drinking juices**, **making juices**, **GAGT Users** and **Orange Juices**. After doing this, another K-means clustering is done to define the sentiments per post. It showed that discussion of juice in Singapore were more negative in sentiment. This is mostly due to dirty orange juice given out by vending machines. Further improvements can be done like using other clustering methods to get better classification. Also, a dashboard of this project is published at <a href="https://public.tableau.com/profile/rsdnoob#!/vizhome/SingaporeanPostsaboutJuiceSentimentalAnalysis/Dashboard1"  target="_blank">my Tableau dashboard</a>.
+Most of the time, text data doesn't have a label. There are basic analysis that can be done in this kind of data like word frequency and collocation. However, advance analysis can also be done if the data is labelled. This kind of analysis includes text classification and sentiment analysis. Hence, this project used an unsupervised learning method to label text data. The data was from public posts in Singapore around juices and beverages. The timeframe of the data was from November 2018 to May 2019. Basic analysis was done prior to performing advanced analysis. Using K-means clustering to classify, it showed five categories of posts which were **fruit juices**, **shared ideas about juices**, **drinking juices**, **making juices**, **GAGT Users** and **Orange Juices**. After doing this, another K-means clustering was done to define the sentiments per post. It showed that discussion of juice in Singapore were more negative in sentiment. This was mostly due to dirty orange juice given out by vending machines. Further improvements can be done like using other clustering methods to get better classification. Also, a dashboard of this project was published at <a href="https://public.tableau.com/profile/rsdnoob#!/vizhome/SingaporeanPostsaboutJuiceSentimentalAnalysis/Dashboard1"  target="_blank">my Tableau dashboard</a>.
 
 ## Dataset
 
@@ -28,11 +28,11 @@ Most of the data processing will be done in **Content** column. Due to limited t
 
 **pandas** python module will be used to open and manipulate the data.
 
-The dataset contains **8072** posts. However, this will be trim down later after text cleaning.
+The dataset contains **8072** posts. However, this will be lesser later after text cleaning.
 
 Most of the language used in this dataset is English. This information will be used later for text cleaning.
 
-There are more comments than articles in this dataset. It can be useful for removing contents that are duplicate of another content from different users.
+There are more comments than articles in this dataset. It can be useful for removing contents that are duplicates of another content from different users.
 
 ## Text cleaning
 
@@ -93,7 +93,7 @@ The first step in this analysis is to get trainable data. This means to transfor
 
 After transforming the data, the next step is to identify the number of clusters. As of now, there are no automatic methods to do this. However, there are statistical tests that can be done to make identifying the number of clusters easier. In this projet, calinski harabasz ascore and silhouette score will be used.
 
-*Use this as a reference:*
+*Use these as a reference:*
 - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.calinski_harabasz_score.html
 - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html
 
@@ -130,8 +130,7 @@ Here is the link on the post on February 16, 2019: https://web.facebook.com/perm
 ## Insights
 
 - Doing an exploratory data analysis (EDA) on the data is useful since it can later in improving the data, e.g. text cleaning.
-- Text cleaning is important in text analysis since it improves or worsens the discovery of insgihts.
-- Even though it is **Basic** Analysis, there are still a lot of insights that can be discovered.
+- Text cleaning is important in text analysis since it improves or worsens the discovery of insights.
 - If the words **juice**, **juices**, **beverage** and **beverages** are not removed, they will show up as the most frequent words.
 - Removing duplicates is important in text cleaning, since if it is not done, then insights from collocations will be affected. It is possible that useless bi-grams or tri-grams may show up.
 - Unsupervised learning is useful if there is no labelled data available.
